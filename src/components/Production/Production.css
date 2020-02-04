@@ -1,0 +1,24 @@
+.ProductionContainer {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.productionBlock {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.productionBlock img {
+    height: 56%;
+    max-width: 90%;
+    margin-bottom: 50px;
+}
+
+.productionBlock p {
+    font-size: 32px;
+    font-family: "Rubik", sans-serif;
+}

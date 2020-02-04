@@ -1,0 +1,23 @@
+.ContactUsContainer {
+    padding-right: 100px !important;
+    padding-left: 100px !important;
+    font-family: 'Rubik', sans-serif;
+}
+
+.contactUsLinks {
+    margin-bottom: 70px;
+}
+
+.map {
+    text-align: center;
+}
+
+.socialLinks {
+    justify-content: center;
+}
+
+.socialLinks img {
+    width: 80px;
+    height: 80px;
+    margin: 0 20px;
+}

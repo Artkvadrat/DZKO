@@ -1,0 +1,70 @@
+.detailedInformationContainer {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+.carouselDetailed {
+    height: auto;
+}
+
+.descriptionText {
+    color: #494949;
+    text-indent: 30px;
+    font-size: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.descriptionHeader {
+    color: #363636;
+    font-size: 24px;
+    text-indent: 30px;
+}
+
+
+.designImg img {
+    margin: 20px auto;
+    width: 80%;
+    height: auto;
+}
+
+.descriptionBlock {
+    margin-bottom: 100px;
+}
+
+.carousel .slide {
+    height: 600px;
+    background-color: white!important;
+}
+
+.carousel .slide img {
+    padding: 50px;
+    width: 80%!important;
+}
+
+.carousel .carousel-status {
+    text-shadow: none!important;
+    color: black!important;
+    font-size: 14px!important;
+    font-family: "Rubik", sans-serif;
+}
+
+.carousel .control-next.control-arrow:before {
+    border-left: 0!important;
+    content: url("./../../img/Icons/ButtonRight.png")!important;
+}
+
+.carousel .control-prev.control-arrow:before {
+    border-right: 0!important;
+    content: url("./../../img/Icons/buttonLeft.png")!important;
+}
+
+
+.carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
+    border-top: 0!important;
+    border-bottom: 0!important;
+
+}

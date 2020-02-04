@@ -1,0 +1,9 @@
+.myTable {
+    max-width: 80%;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+}
+
+.myTable td {
+    border: 1px solid black;
+}

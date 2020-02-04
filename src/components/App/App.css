@@ -1,0 +1,32 @@
+.containerHeader {
+    color: Black !important;
+    font-size: 50px;
+    text-align: center;
+}
+
+.blue {
+     color: #000B6F;
+ }
+
+.linkToMain {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.linkToMain a{
+    color: #000B6F;
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+
+}
+
+.linkToMain a:visited {
+    color: #000B6F;
+}
+
+.linkToMain img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
