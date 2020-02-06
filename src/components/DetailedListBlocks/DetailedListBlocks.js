@@ -43,7 +43,7 @@ export default class DetailedListBlocks extends Component {
             case "tanks": {
                 return data.tanks.map( (item, id) => {
                     return (
-                        // id + 8 because tanks category start from 7 elements up to 8
+                        // id + 8 because tanks category start from 8 elements up to 9
                         <Col lg={6} sm={12} key={id}>
                             <Link to={`/production/tanks/${id+8}`}>
                                 <Block img={findImg(item.img)}
@@ -68,14 +68,30 @@ export default class DetailedListBlocks extends Component {
                     )
                 });
             }
+            case "metalProcessing": {
+                return data.metalProcessing.map( (item, id) => {
+                    return (
+                        // id + 18 because metal processing category start from 18 elements up to 25
+                        <Col lg={6} sm={12} key={id}>
+                            <Link to={`/production/metalProcessing/${id+23}`}>
+                                <Block img={findImg(item.img)}
+                                       text={item.text}
+                                       key={id}/>
+                            </Link>
+                        </Col>
+                    )
+                });
+            }
             case "services": {
                 return data.services.map( (item, id) => {
                     return (
-                        // id + 10 because tanks category start from 10 elements up to 17
+                        // id + 26 because service category
                         <Col lg={6} sm={12} key={id}>
-                            <Block img={findImg(item.img)}
-                                   text={item.text}
-                                   key={id}/>
+                            <Link to={`/production/services/${id+31}`}>
+                                <Block img={findImg(item.img)}
+                                       text={item.text}
+                                       key={id}/>
+                            </Link>
                         </Col>
                     )
                 });

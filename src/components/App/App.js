@@ -35,11 +35,16 @@ function App() {
                                return <DetailedListPage active={3}/>
                            }}
                            exact />
-                     <Route path="/production/services"
-                            render={ () => {
-                                return <DetailedListPage active={4}/>
-                            }}
-                            exact />
+                    <Route path="/production/metalProcessing"
+                        render={ () => {
+                            return <DetailedListPage active={4}/>
+                        }}
+                        exact />
+                    <Route path="/production/services"
+                           render={ () => {
+                               return <DetailedListPage active={5}/>
+                           }}
+                           exact />
                     <Route path="/production/conveyor/:id"
                            render={ ({match}) => {
                                const { id } = match.params;
@@ -53,6 +58,16 @@ function App() {
                     <Route path="/production/chains/:id"
                            render={ ({match}) => {
                                const { id } = match.params;
+                               return <DetailedInformation id={id}/>
+                           }}/>
+                    <Route path="/production/metalProcessing/:id"
+                           render={ ({match}) => {
+                               const {id} = match.params;
+                               return <DetailedInformation id={id}/>
+                           }}/>
+                    <Route path="/production/services/:id"
+                           render={ ({match}) => {
+                               const {id} = match.params;
                                return <DetailedInformation id={id}/>
                            }}/>
                     <Route path="/contactUs"

@@ -11,6 +11,7 @@ import backImg from "../../img/Icons/back.png";
 import conveyor from '../../img/products/34.png';
 import tank from '../../img/products/41.png';
 import chain from '../../img/products/76.png';
+import service from '../../img/products/36.png'
 
 export default class Production extends Component {
 
@@ -64,12 +65,24 @@ export default class Production extends Component {
                                 </button>
                             </Link>
                         </Col>
-                        {/*<Col lg={4} sm={12}>*/}
-                        {/*    <button className="productionBlock">*/}
-                        {/*        <img src={chain} alt=""/>*/}
-                        {/*        <p>Услуги</p>*/}
-                        {/*    </button>*/}
-                        {/*</Col>*/}
+                        <Col lg={4} sm={12}>
+                            <Link to='/production/metalProcessing'>
+                                <button className="productionBlock"
+                                        onClick={<DetailedListPage name={4}/>}>
+                                    <img src={service} alt=""/>
+                                    <p>Механическая обработка металла</p>
+                                </button>
+                            </Link>
+                        </Col>
+                        <Col lg={4} sm={12}>
+                            <Link to='/production/services'>
+                                <button className="productionBlock"
+                                        onClick={<DetailedListPage name={4}/>}>
+                                    <img src={service} alt=""/>
+                                    <p>Услуги</p>
+                                </button>
+                            </Link>
+                        </Col>
                     </Row>
                 </Container>
                 <Footer/>

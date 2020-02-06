@@ -51,7 +51,8 @@ export default class ContactUs extends Component {
                                     <img src={geo} alt="geolocation"/>
                                 </a>
                                 <p>
-                                    <a href="https://www.google.com/maps/place/%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%9A%D0%BD%D1%8F%D0%B7%D1%8F+%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%B0+%D0%9C%D1%83%D0%B4%D1%80%D0%BE%D0%B3%D0%BE,+59,+%D0%94%D0%BD%D0%B8%D0%BF%D1%80%D0%BE,+%D0%94%D0%BD%D0%B5%D0%BF%D1%80%D0%BE%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+49000/@48.4782994,35.0208805,17z/data=!3m1!4b1!4m5!3m4!1s0x40dbe2588b7a89ef:0x5e993f6db37f7214!8m2!3d48.4782959!4d35.0230692">
+                                    <a target="_blank"
+                                       href="https://www.google.com/maps/place/%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%9A%D0%BD%D1%8F%D0%B7%D1%8F+%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%B0+%D0%9C%D1%83%D0%B4%D1%80%D0%BE%D0%B3%D0%BE,+59,+%D0%94%D0%BD%D0%B8%D0%BF%D1%80%D0%BE,+%D0%94%D0%BD%D0%B5%D0%BF%D1%80%D0%BE%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+49000/@48.4782994,35.0208805,17z/data=!3m1!4b1!4m5!3m4!1s0x40dbe2588b7a89ef:0x5e993f6db37f7214!8m2!3d48.4782959!4d35.0230692">
                                         г. Днепр<br/>ул. Ярослава Мудрого № 59-А<br/>офис 5, 49038
                                     </a>
                                 </p>

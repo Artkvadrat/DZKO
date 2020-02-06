@@ -15,7 +15,8 @@ export default class DetailedListPage extends Component {
             { text: "Конвейера", active: false, id: 1 },
             { text: "Металлоконструкции", active: false, id: 2 },
             { text: "Цепи и такелаж", active: false, id: 3 },
-            { text: "Услуги", active: false, id: 4 }
+            { text: "Механическая обработка металла", active: false, id: 4 },
+            { text: "Услуги", active: false, id: 5 }
         ]
     };
 
@@ -48,7 +49,7 @@ export default class DetailedListPage extends Component {
 
     findActive() {
         let url = window.location.href;
-        let result = /(chains|tanks|conveyor|services)/.exec(url);
+        let result = /(chains|tanks|conveyor|metalProcessing|services)/.exec(url);
         return result[0];
     }
 
@@ -90,10 +91,16 @@ export default class DetailedListPage extends Component {
                                         { buttons[2].text}
                                     </button>
                                 </Link>
-                                <Link to="/production/services">
+                                <Link to="/production/metalProcessing">
                                     <button type="button"
                                             className={ buttons[3].active ? classActive : classPassive }>
                                         { buttons[3].text}
+                                    </button>
+                                </Link>
+                                <Link to="/production/services">
+                                    <button type="button"
+                                            className={ buttons[4].active ? classActive : classPassive }>
+                                        { buttons[4].text}
                                     </button>
                                 </Link>
                             </ButtonGroup>

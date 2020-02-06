@@ -7,9 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import {Link} from "react-router-dom";
-import AnchorChainTable from "../tables/AnchorChainTable";
-import ForkChain from "../tables/ForkChain";
-import RoundGainChain from "../tables/RoundGainChain";
+import { AnchorChainTable, DriveRollerChains, ForkChain, RoundGainChain } from '../tables/index';
 //importing .json file as txt array
 import txt from './detailedInformation';
 //import images
@@ -31,7 +29,7 @@ export default class DetailedInformation extends Component {
 
         const { id } = this.props;
         let currentUrl = window.location.href;
-        let fromUrl = /\/production\/(conveyor|tanks|chains)/.exec(currentUrl);
+        let fromUrl = /\/production\/(conveyor|tanks|chains|metalProcessing|services)/.exec(currentUrl);
 
         // function to import whole directory of files
         let importAll = ( r ) => {
@@ -95,6 +93,8 @@ export default class DetailedInformation extends Component {
                 return <ForkChain/>
             } else if ( id == 12 ) {
                 return <RoundGainChain/>
+            } else if ( id == 13 ) {
+                return <DriveRollerChains/>
             }
         };
 
