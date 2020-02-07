@@ -7,7 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import {Link} from "react-router-dom";
-import { AnchorChainTable, DriveRollerChains, ForkChain, RoundGainChain } from '../tables/index';
+import { AnchorChainTable, DriveRollerChains, ForkChain, RoundGainChain, ClipSA, ClipP, Kenter, Talrep } from '../tables/index';
 //importing .json file as txt array
 import txt from './detailedInformation';
 //import images
@@ -87,14 +87,23 @@ export default class DetailedInformation extends Component {
             }
         };
         let isTables = () => {
-            if ( id == 11 ) {
-                return <AnchorChainTable/>
-            } else if ( id == 10 ) {
-                return <ForkChain/>
-            } else if ( id == 12 ) {
-                return <RoundGainChain/>
-            } else if ( id == 13 ) {
-                return <DriveRollerChains/>
+            switch (id) {
+                case '11':
+                    return <AnchorChainTable/>;
+                case '10':
+                    return <ForkChain/>;
+                case '12':
+                    return <RoundGainChain/>;
+                case '13':
+                    return <DriveRollerChains/>;
+                case '18':
+                    return <ClipSA/>;
+                case '19':
+                    return <ClipP/>;
+                case '21':
+                    return <Kenter/>;
+                case '20':
+                    return <Talrep/>
             }
         };
 
