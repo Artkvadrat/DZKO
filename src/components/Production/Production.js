@@ -22,6 +22,7 @@ export default class Production extends Component {
     }
 
     render() {
+
         return (
             <React.Fragment>
                 <Container fluid={true} className="ProductionContainer">
@@ -49,8 +50,7 @@ export default class Production extends Component {
                         </Col>
                         <Col lg={4} sm={12}>
                             <Link to='/production/tanks'>
-                                <button className="productionBlock"
-                                        onClick={<DetailedListPage name={2} />}>
+                                <button className="productionBlock">
                                     <img src={tank} alt=""/>
                                     <p>Металлоконструкции</p>
                                 </button>
@@ -58,8 +58,7 @@ export default class Production extends Component {
                         </Col>
                         <Col lg={4} sm={12}>
                             <Link to='/production/chains'>
-                                <button className="productionBlock"
-                                        onClick={<DetailedListPage name={3}/>}>
+                                <button className="productionBlock">
                                     <img src={chain} alt=""/>
                                     <p>Цепи и такелаж</p>
                                 </button>
@@ -67,8 +66,7 @@ export default class Production extends Component {
                         </Col>
                         <Col lg={4} sm={12}>
                             <Link to='/production/metalProcessing'>
-                                <button className="productionBlock"
-                                        onClick={<DetailedListPage name={4}/>}>
+                                <button className="productionBlock">
                                     <img src={service} alt=""/>
                                     <p>Механическая обработка металла</p>
                                 </button>
@@ -76,8 +74,7 @@ export default class Production extends Component {
                         </Col>
                         <Col lg={4} sm={12}>
                             <Link to='/production/services'>
-                                <button className="productionBlock"
-                                        onClick={<DetailedListPage name={4}/>}>
+                                <button className="productionBlock">
                                     <img src={service} alt=""/>
                                     <p>Услуги</p>
                                 </button>

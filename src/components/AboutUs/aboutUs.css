@@ -1,0 +1,32 @@
+.AboutUsContainer{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+.aboutImg {
+    text-align: right;
+}
+
+.aboutImg img{
+    width: 95%;
+}
+
+.backgroundNumber {
+    color: #E2E2E2;
+    font-size: 300px;
+    line-height: 220px;
+    margin-bottom: -220px;
+}
+
+.aboutText {
+    font-weight: 500;
+    text-indent: 30px;
+    text-align: justify;
+    font-size: 18px;
+    color: #545454;
+}
+
+.textHeader {
+    color: black;
+}

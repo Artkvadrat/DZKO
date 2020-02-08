@@ -3,9 +3,11 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //importing components
 import ContactUs from "../ContactUs/ContactUs";
+import AboutUs from "../AboutUs/abouUs";
 import DetailedInformation from "../DetailedInformation/DateiledInformation";
 import Production from "../Production/Production";
 import DetailedListPage from "../DetailedListPage/DetailedListPage";
+import MainPage from "../MainPage/mainPage";
 //import Router
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../Header/Header";
@@ -18,6 +20,8 @@ function App() {
             <Router>
                 <Header/>
                 <Switch>
+                    <Route path="/"
+                           component={ MainPage } exact />
                     <Route path="/production"
                            component={ Production } exact />
                     <Route path="/production/conveyor"
@@ -72,8 +76,10 @@ function App() {
                            }}/>
                     <Route path="/contactUs"
                            component={ ContactUs } exact/>
+                     <Route path="/aboutUs"
+                            component={ AboutUs } exact/>
                 </Switch>
-          </Router>
+            </Router>
         </React.Fragment>
     );
 }

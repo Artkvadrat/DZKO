@@ -20,7 +20,7 @@ export default class Form extends Component {
 
         let templateParams = {
             from_name: email,
-            subject: `Вопрос от ${name}`,
+            subject: name,
             message_html: message,
             message_phone: phone,
             message_name: name

@@ -15,6 +15,7 @@ import facebook from '../../img/Icons/facebook.png';
 import instagram from '../../img/Icons/instagram.png';
 import telegram from '../../img/Icons/telegram.png';
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
+import {Link} from "react-router-dom";
 
 
 export default class ContactUs extends Component {
@@ -32,12 +33,12 @@ export default class ContactUs extends Component {
                     <Row>
                         <Col sm={5}>
                             <div className="d-flex linkToMain">
-                                <a href="#">
+                                <Link to="/">
                                     <img src={backImg} alt="Back"/>
-                                </a>
-                                <a href="#">
+                                </Link>
+                                <Link to="/">
                                     главная страница
-                                </a>
+                                </Link>
                             </div>
                         </Col>
                     </Row>

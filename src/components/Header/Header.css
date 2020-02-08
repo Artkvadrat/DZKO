@@ -3,6 +3,11 @@
     padding: 0 100px;
 }
 
+.header a{
+    text-decoration: none;
+    outline: none;
+}
+
 .logo {
     text-align: center;
 }
@@ -26,6 +31,7 @@
 }
 
 .headerList ul {
+    padding-left: 100px;
     width: 100%;
 }
 
@@ -46,9 +52,21 @@
 }
 
 .callBack {
-    padding: 20px 17px;
+    padding: 0!important;
+}
+
+.callBack button:hover {
+    color: #000B6F;
+    transform: scale(1);
+}
+
+.callBack button{
+    padding: 18px 15px;
     border: 2px solid white;
     border-radius: 15px;
+    color: white;
+    background-color: rgba(0,0,0,0);
+    outline: none;
 }
 
 .header li:hover {
@@ -57,7 +75,7 @@
     border: 0 solid;
     border-radius: 13px;
     transition-duration: 0.5s;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .header li:hover a {

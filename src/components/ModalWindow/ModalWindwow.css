@@ -1,0 +1,17 @@
+.modalForm {
+    width: 400px;
+}
+
+#modalNameInput, #modalPhoneInput {
+    width: 100%;
+    margin-top: 25px;
+    background-color: #D4D4D4;
+    border: 0;
+    border-radius: 5px;
+    height: 50px;
+    padding-left: 15px;
+    line-height: 50px;
+    color: #3c4540;
+    outline: none;
+    font-family: 'Rubik', sans-serif;
+}
