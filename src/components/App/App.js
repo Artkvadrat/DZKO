@@ -29,24 +29,29 @@ function App() {
                                return <DetailedListPage active={1}/>
                            }}
                            exact />
-                    <Route path="/production/tanks"
+                    <Route path="/production/metalStructures"
                            render={ () => {
                                return <DetailedListPage active={2}/>
                            }}
                            exact />
-                    <Route path="/production/chains"
+                    <Route path="/production/tank"
                            render={ () => {
                                return <DetailedListPage active={3}/>
                            }}
                            exact />
-                    <Route path="/production/metalProcessing"
+                    <Route path="/production/chains"
+                           render={ () => {
+                               return <DetailedListPage active={4}/>
+                           }}
+                           exact />
+                    <Route path="/production/services"
                         render={ () => {
-                            return <DetailedListPage active={4}/>
+                            return <DetailedListPage active={5}/>
                         }}
                         exact />
-                    <Route path="/production/services"
+                    <Route path="/production/repair"
                            render={ () => {
-                               return <DetailedListPage active={5}/>
+                               return <DetailedListPage active={6}/>
                            }}
                            exact />
                     <Route path="/production/conveyor/:id"
@@ -54,7 +59,12 @@ function App() {
                                const { id } = match.params;
                                return <DetailedInformation id={id}/>
                            }}/>
-                    <Route path="/production/tanks/:id"
+                    <Route path="/production/metalStructures/:id"
+                           render={ ({match}) => {
+                               const { id } = match.params;
+                               return <DetailedInformation id={id}/>
+                           }}/>
+                    <Route path="/production/tank/:id"
                            render={ ({match}) => {
                                const { id } = match.params;
                                return <DetailedInformation id={id}/>
@@ -64,12 +74,12 @@ function App() {
                                const { id } = match.params;
                                return <DetailedInformation id={id}/>
                            }}/>
-                    <Route path="/production/metalProcessing/:id"
+                    <Route path="/production/services/:id"
                            render={ ({match}) => {
                                const {id} = match.params;
                                return <DetailedInformation id={id}/>
                            }}/>
-                    <Route path="/production/services/:id"
+                    <Route path="/production/repair/:id"
                            render={ ({match}) => {
                                const {id} = match.params;
                                return <DetailedInformation id={id}/>

@@ -8,6 +8,7 @@ import tank from "../../img/products/41.png";
 import chain from "../../img/products/76.png";
 import service from "../../img/products/36.png";
 import company from "../../img/company.jpg";
+import metalStructures from "../../img/products/40.jpg";
 
 const MainPage = () => {
     return (
@@ -24,39 +25,52 @@ const MainPage = () => {
                         </Link>
                     </Col>
                     <Col lg={4} sm={12}>
-                        <Link to='/production/tanks'>
+                        <Link to='/production/metalStructures'>
                             <button className="productionBlock">
-                                <img src={tank} alt=""/>
+                                <img src={metalStructures} alt=""/>
                                 <p>Металлоконструкции</p>
                             </button>
                         </Link>
                     </Col>
                     <Col lg={4} sm={12}>
-                        <Link to='/production/chains'>
+                        <Link to='/production/tank'>
                             <button className="productionBlock">
-                                <img src={chain} alt=""/>
-                                <p>Цепи и такелаж</p>
+                                <img src={tank} alt=""/>
+                                <p>Бак конденсаторный</p>
                             </button>
                         </Link>
                     </Col>
                 </Row>
                 <Row className="justify-content-center">
-                    <Col lg={4} sm={12}>
-                        <Link to='/production/metalProcessing'>
-                            <button className="productionBlock">
-                                <img src={service} alt=""/>
-                                <p>Механическая обработка металла</p>
-                            </button>
-                        </Link>
-                    </Col>
-                    <Col lg={4} sm={12}>
-                        <Link to='/production/services'>
-                            <button className="productionBlock">
-                                <img src={service} alt=""/>
-                                <p>Услуги</p>
-                            </button>
-                        </Link>
-                    </Col>
+                    <Link to="/production">
+                        <button className="allProductionButton">
+                            Вся продукция
+                        </button>
+                    </Link>
+                    {/*<Col lg={4} sm={12}>*/}
+                    {/*    <Link to='/production/chains'>*/}
+                    {/*        <button className="productionBlock">*/}
+                    {/*            <img src={chain} alt=""/>*/}
+                    {/*            <p>Цепи и такелаж</p>*/}
+                    {/*        </button>*/}
+                    {/*    </Link>*/}
+                    {/*</Col>*/}
+                    {/*<Col lg={4} sm={12}>*/}
+                    {/*    <Link to='/production/services'>*/}
+                    {/*        <button className="productionBlock">*/}
+                    {/*            <img src={service} alt=""/>*/}
+                    {/*            <p>Механическая обработка металла</p>*/}
+                    {/*        </button>*/}
+                    {/*    </Link>*/}
+                    {/*</Col>*/}
+                    {/*<Col lg={4} sm={12}>*/}
+                    {/*    <Link to='/production/repair'>*/}
+                    {/*        <button className="productionBlock">*/}
+                    {/*            <img src={service} alt=""/>*/}
+                    {/*            <p>Услуги</p>*/}
+                    {/*        </button>*/}
+                    {/*    </Link>*/}
+                    {/*</Col>*/}
                 </Row>
                 <p className="containerHeader">О <span className="blue">компании</span></p>
                 <Row className="justify-content-center">

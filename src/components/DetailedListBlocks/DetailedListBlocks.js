@@ -40,12 +40,26 @@ export default class DetailedListBlocks extends Component {
                     )
                 });
             }
-            case "tanks": {
-                return data.tanks.map( (item, id) => {
+            case "tank": {
+                return data.tank.map( (item, id) => {
                     return (
-                        // id + 8 because tanks category start from 8 elements up to 9
+                        // id + 9 because tank category start from 9 elements up to 9
                         <Col lg={6} sm={12} key={id}>
-                            <Link to={`/production/tanks/${id+8}`}>
+                            <Link to={`/production/tank/${id+9}`}>
+                                <Block img={findImg(item.img)}
+                                       text={item.text}
+                                       key={id}/>
+                            </Link>
+                        </Col>
+                    )
+                });
+            }
+            case "metalStructures": {
+                return data.metalStructures.map( (item, id) => {
+                    return (
+                        // id + 8 because metalStructures category start from 8 elements up to 8
+                        <Col lg={6} sm={12} key={id}>
+                            <Link to={`/production/metalStructures/${id+8}`}>
                                 <Block img={findImg(item.img)}
                                        text={item.text}
                                        key={id}/>
@@ -68,12 +82,12 @@ export default class DetailedListBlocks extends Component {
                     )
                 });
             }
-            case "metalProcessing": {
-                return data.metalProcessing.map( (item, id) => {
+            case "services": {
+                return data.services.map( (item, id) => {
                     return (
-                        // id + 18 because metal processing category start from 18 elements up to 25
+                        // id + 19 because metal processing category start from 24 elements up to 31
                         <Col lg={6} sm={12} key={id}>
-                            <Link to={`/production/metalProcessing/${id+23}`}>
+                            <Link to={`/production/services/${id+24}`}>
                                 <Block img={findImg(item.img)}
                                        text={item.text}
                                        key={id}/>
@@ -82,12 +96,12 @@ export default class DetailedListBlocks extends Component {
                     )
                 });
             }
-            case "services": {
-                return data.services.map( (item, id) => {
+            case "repair": {
+                return data.repair.map( (item, id) => {
                     return (
-                        // id + 26 because service category
+                        // id + 27 because service category
                         <Col lg={6} sm={12} key={id}>
-                            <Link to={`/production/services/${id+31}`}>
+                            <Link to={`/production/repair/${id+32}`}>
                                 <Block img={findImg(item.img)}
                                        text={item.text}
                                        key={id}/>

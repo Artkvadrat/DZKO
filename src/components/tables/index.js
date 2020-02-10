@@ -7,5 +7,7 @@ import ClipSA from "./clipSA";
 import ClipP from "./clipP";
 import Kenter from "./kenter";
 import Talrep from "./talrep";
+import VariatorChain from "./variatorChain";
+import Swivel from "./swivel";
 
-export { AnchorChainTable, DriveRollerChains, ForkChain, RoundGainChain, ClipSA, ClipP, Kenter, Talrep };
+export { AnchorChainTable, DriveRollerChains, ForkChain, RoundGainChain, ClipSA, ClipP, Kenter, Talrep, VariatorChain, Swivel };

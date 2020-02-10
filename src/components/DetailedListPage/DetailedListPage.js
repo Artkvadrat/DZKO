@@ -12,11 +12,12 @@ export default class DetailedListPage extends Component {
 
     state = {
         buttons: [
-            { text: "Конвейера", active: false, id: 1 },
-            { text: "Металлоконструкции", active: false, id: 2 },
-            { text: "Цепи и такелаж", active: false, id: 3 },
-            { text: "Механическая обработка металла", active: false, id: 4 },
-            { text: "Услуги", active: false, id: 5 }
+            { text: "Конвейеры", active: false, id: 1 },
+            { text: "Изготовление металлоконструкций", active: false, id: 2 },
+            { text: "Бак конденсаторный", active: false, id: 3 },
+            { text: "Цепи и такелаж", active: false, id: 4 },
+            { text: "Механическая обработка металла", active: false, id: 5 },
+            { text: "Ремонт оборудования", active: false, id: 6 }
         ]
     };
 
@@ -49,7 +50,7 @@ export default class DetailedListPage extends Component {
 
     findActive() {
         let url = window.location.href;
-        let result = /(chains|tanks|conveyor|metalProcessing|services)/.exec(url);
+        let result = /(chains|tank|conveyor|metalStructures|services|repair)/.exec(url);
         return result[0];
     }
 
@@ -79,19 +80,19 @@ export default class DetailedListPage extends Component {
                                         { buttons[0].text}
                                     </button>
                                 </Link>
-                                <Link to='/production/tanks'>
+                                <Link to='/production/metalStructures'>
                                     <button  type="button"
                                              className={ buttons[1].active ? classActive : classPassive }>
                                         { buttons[1].text}
                                     </button>
                                 </Link>
-                                <Link to='/production/chains'>
-                                    <button type="button"
-                                            className={ buttons[2].active ? classActive : classPassive }>
+                                <Link to='/production/tank'>
+                                    <button  type="button"
+                                             className={ buttons[2].active ? classActive : classPassive }>
                                         { buttons[2].text}
                                     </button>
                                 </Link>
-                                <Link to="/production/metalProcessing">
+                                <Link to='/production/chains'>
                                     <button type="button"
                                             className={ buttons[3].active ? classActive : classPassive }>
                                         { buttons[3].text}
@@ -101,6 +102,12 @@ export default class DetailedListPage extends Component {
                                     <button type="button"
                                             className={ buttons[4].active ? classActive : classPassive }>
                                         { buttons[4].text}
+                                    </button>
+                                </Link>
+                                <Link to="/production/repair">
+                                    <button type="button"
+                                            className={ buttons[5].active ? classActive : classPassive }>
+                                        { buttons[5].text}
                                     </button>
                                 </Link>
                             </ButtonGroup>
