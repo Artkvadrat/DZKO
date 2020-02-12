@@ -1,98 +1,84 @@
 import React, {Component} from "react";
-import * as emailjs from 'emailjs'
-import './Form.css'
-import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
+import emailjs from 'emailjs-com'
+import './Form.css';
+import Modal from "react-modal";
+
+const customStyles = {
+    content : {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        textAlign: 'center',
+        border: '1px solid #000B6F',
+        color: '#000B6F'
+    }
+};
 
 export default class Form extends Component {
-
-    // sending email throw emailJS service
     state = {
-        name: '',
-        phone: '',
-        email: '',
-        message: ''
+        show: false
     };
 
-    handleSubmit = ( e ) => {
+    openModal = () => {
+        this.setState({show: true})
+    };
+
+    closeModal = () => {
+        this.setState({show: false});
+
+    };
+
+    sendEmail = (e) => {
         e.preventDefault();
 
-        const { name, phone, email, message } = this.state;
-
-        let templateParams = {
-            from_name: email,
-            subject: name,
-            message_html: message,
-            message_phone: phone,
-            message_name: name
-        };
-
-        emailjs.send( 'gmail', 'template_zXMoe4Jj', templateParams )
-            .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-                console.log('FAILED...', error);
+        emailjs.sendForm("siteDZKO", "template_zXMoe4Jj", e.target, "user_hU6rV9k4GGsqkLdd1nLrY")
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
             });
 
-        this.resetForm();
+        this.openModal();
+
     };
-
-    resetForm() {
-        this.setState({
-            name: '',
-            phone: '',
-            email: '',
-            message: ''
-        })
-    }
-
-    handleChange = (param, e) => {
-        this.setState({ [param]: e.target.value })
-    };
-
-    componentDidCatch(error, errorInfo) {
-        console.error( error );
-        console.error( errorInfo );
-        return <ErrorBoundary/>
-    }
 
     render() {
-
-        const { name, phone, email, message } = this.state;
+        const { show } = this.state;
 
         return (
-            <form>
+            <>
+        <form onSubmit={this.sendEmail}>
                 <input placeholder="Ваше имя"
                        id="nameInput"
                        type="name"
-                       name="name"
-                       value={ name }
-                       onChange={this.handleChange.bind(this, 'name')} />
-                <div className="d-flex justify-content-between">
+                       name="contact_name"/>
+                <div className="secondLineOfForm">
                     <input placeholder="Ваш телефон"
                            id="phoneInput"
                            type="phone"
-                           name="phone"
-                           value={ phone }
-                           onChange={this.handleChange.bind(this, 'phone')} />
+                           name="user_phone"/>
                     <input placeholder="Ваш E-mail"
                            id="emailInput"
                            type="email"
-                           name="email"
-                           value={ email }
-                           onChange={this.handleChange.bind(this, 'email')} />
+                           name="user_email"/>
                 </div>
                 <textarea placeholder="Ваш вопрос"
                           id="messageInput"
                           maxLength="300"
                           rows="5"
                           cols="35"
-                          name="message"
-                          value={ message }
-                          onChange={this.handleChange.bind(this, 'message')} />
-                <button className="submitForm" type="submit">
-                    Отправить
-                </button>
+                          name="message"/>
+                <input type="submit" value="Оправить" className="submitForm"/>
             </form>
+            <Modal isOpen={show}
+                   onRequestClose={this.closeModal}
+                   style={customStyles}>
+                <h3>Сообщение отправлено!</h3>
+            </Modal>
+            </>
         )
     }
 }

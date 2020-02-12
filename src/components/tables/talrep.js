@@ -18,8 +18,8 @@ const Talrep = () => {
             </thead>
             <tbody>
                 <tr>
-                    <td>0,3 ВВ-ОС</td>
-                    <td>3-ОС-ВВ</td>
+                    <td>0,3 ВВ-ОШ</td>
+                    <td>3-ОШ-ВВ</td>
                     <td>M10</td>
                     <td>0.3</td>
                     <td>112</td>
@@ -28,8 +28,8 @@ const Talrep = () => {
                     <td>0.50</td>
                 </tr>
                 <tr>
-                    <td>0,5 ВВ-ОС</td>
-                    <td>5-ОС-ВВ</td>
+                    <td>0,5 ВВ-ОШ</td>
+                    <td>5-ОШ-ВВ</td>
                     <td>M12</td>
                     <td>0.5</td>
                     <td>140</td>
@@ -38,8 +38,8 @@ const Talrep = () => {
                     <td>0.92</td>
                 </tr>
                 <tr>
-                    <td>0,8 ВВ-ОС</td>
-                    <td>8-ОС-ВВ</td>
+                    <td>0,8 ВВ-ОШ</td>
+                    <td>8-ОШ-ВВ</td>
                     <td>M14</td>
                     <td>0.8</td>
                     <td>140</td>
@@ -48,8 +48,8 @@ const Talrep = () => {
                     <td>1.10</td>
                 </tr>
                 <tr>
-                    <td>1,2 ВВ-ОС</td>
-                    <td>12-ОС-ВВ</td>
+                    <td>1,2 ВВ-ОШ</td>
+                    <td>12-ОШ-ВВ</td>
                     <td>M16</td>
                     <td>1.2</td>
                     <td>168</td>
@@ -58,8 +58,8 @@ const Talrep = () => {
                     <td>1.9</td>
                 </tr>
                 <tr>
-                    <td>1,6 ВВ-ОС</td>
-                    <td>16-ОС-ВВ</td>
+                    <td>1,6 ВВ-ОШ</td>
+                    <td>16-ОШ-ВВ</td>
                     <td>M18</td>
                     <td>1.6</td>
                     <td>168</td>
@@ -68,8 +68,8 @@ const Talrep = () => {
                     <td>2.26</td>
                 </tr>
                 <tr>
-                    <td>2,0 ВВ-ОС</td>
-                    <td>20-ОС-ВВ</td>
+                    <td>2,0 ВВ-ОШ</td>
+                    <td>20-ОШ-ВВ</td>
                     <td>M20</td>
                     <td>2.0</td>
                     <td>185</td>
@@ -78,8 +78,8 @@ const Talrep = () => {
                     <td>3.60</td>
                 </tr>
                 <tr>
-                    <td>2,5 ВВ-ОС</td>
-                    <td>25-ОС-ВВ</td>
+                    <td>2,5 ВВ-ОШ</td>
+                    <td>25-ОШ-ВВ</td>
                     <td>M22</td>
                     <td>2.5</td>
                     <td>185</td>
@@ -88,8 +88,8 @@ const Talrep = () => {
                     <td>4.20</td>
                 </tr>
                 <tr>
-                    <td>3,2 ВВ-ОС</td>
-                    <td>32-ОС-ВВ</td>
+                    <td>3,2 ВВ-ОШ</td>
+                    <td>32-ОШ-ВВ</td>
                     <td>M24</td>
                     <td>3.2</td>
                     <td>212</td>

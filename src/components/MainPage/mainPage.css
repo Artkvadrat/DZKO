@@ -23,3 +23,19 @@
     border: 2px solid #000B6F;
     transition-duration: 0.5s;
 }
+
+#second {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 1000px) {
+    #second {
+        flex-direction: column;
+    }
+
+    .mainPageContainer {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+}

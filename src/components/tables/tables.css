@@ -1,8 +1,7 @@
 .myTable {
-    width: 1100px;
+    max-width: 1100px;
     text-align: center;
     font-family: "Rubik", sans-serif;
-    overflow: auto;
 }
 
 .myTable td {

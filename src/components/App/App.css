@@ -32,4 +32,11 @@
 }
 *{
     user-select: none;
+    hyphens: auto;
+
+}
+
+.bm-burger-button button {
+    width: 12%!important;
+    height: 12%!important;
 }

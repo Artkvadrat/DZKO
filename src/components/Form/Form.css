@@ -33,6 +33,11 @@ form button {
     font-family: 'Rubik', sans-serif;
 }
 
+.secondLineOfForm {
+    display: flex;
+    justify-content: space-between;
+}
+
 #messageInput {
     height: 150px;
     line-height: 50px;
@@ -48,4 +53,18 @@ form button {
     border: 0;
     font-size: 24px;
     font-family: 'Rubik', sans-serif;
+}
+
+@media (max-width: 1000px) {
+    .submitForm {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .secondLineOfForm {
+        flex-direction: column;
+    }
+    #phoneInput, #emailInput {
+        width: 99%;
+    }
 }

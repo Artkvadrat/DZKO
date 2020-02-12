@@ -42,7 +42,7 @@ export default class DetailedInformation extends Component {
         // get image url from .json and comparing with existed imgs throw url
         let getImages = ( id ) => {
             for ( let i = 0; i < images.length; i++ ){
-                if (/\/[0-9]?[0-9]/.exec(images[i])[0] === `/${id}`) {
+                if (/\/[0-9]?[0-9]?[0-9]/.exec(images[i])[0] === `/${id}`) {
                     return <div key={i}>
                               <img src={ images[i]  } alt=" " />
                            </div>
@@ -53,7 +53,7 @@ export default class DetailedInformation extends Component {
         //// get video url from .json and comparing with existed videos throw url
         let getVideo = ( id ) => {
             for ( let i = 0; i < videos.length; i++ ){
-                if (/\/[0-9]?[0-9]/.exec(images[i])[0] === `/${id}`) {
+                if (/\/[0-9]?[0-9]?[0-9]/.exec(images[i])[0] === `/${id}`) {
                     return <div key={i}>
                                <video src={ videos[i] } controls key={i}/>
                            </div>
@@ -159,7 +159,7 @@ export default class DetailedInformation extends Component {
                         </Col>
                     </Row>
                     <Row className="justify-content-center" style={{overflow: "hidden"}}>
-                        <Col lg={8} sm={11}>
+                        <Col lg={10} sm={12}>
                             { isTables() }
                         </Col>
                     </Row>

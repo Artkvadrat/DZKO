@@ -30,3 +30,18 @@
 .textHeader {
     color: black;
 }
+
+#aboutSecond {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 1000px) {
+    #aboutSecond {
+        flex-direction: column;
+    }
+    .AboutUsContainer{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+}

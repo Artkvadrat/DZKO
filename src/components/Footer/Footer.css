@@ -3,6 +3,12 @@
     font-size: 20px;
 }
 
+.contactInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+}
+
 .footer p {
     color: #000B6F;
     font-family: 'Rubik', sans-serif;
@@ -55,4 +61,14 @@
     line-height: 18px;
     color: #000;
     margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+    .contactInfo {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer {
+        padding: 0 20px;
+    }
 }

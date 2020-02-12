@@ -85,7 +85,7 @@ export default class Production extends Component {
                             <Link to='/production/repair'>
                                 <button className="productionBlock">
                                     <img src={service} alt=""/>
-                                    <p>Услуги</p>
+                                    <p>Ремонт оборудования</p>
                                 </button>
                             </Link>
                         </Col>

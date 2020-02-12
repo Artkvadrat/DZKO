@@ -15,7 +15,7 @@ export default class Map extends Component  {
         //styles for Map
         const mapStyles = {
             "width": '70%',
-            "height": '500px',
+            "height": '450px',
             border: '0'
         };
 

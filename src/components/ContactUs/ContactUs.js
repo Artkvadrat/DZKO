@@ -11,9 +11,6 @@ import backImg from '../../img/Icons/back.png';
 import email from '../../img/Icons/email.png';
 import phone from '../../img/Icons/call-answer.png';
 import geo from '../../img/Icons/maps-and-flags.png';
-import facebook from '../../img/Icons/facebook.png';
-import instagram from '../../img/Icons/instagram.png';
-import telegram from '../../img/Icons/telegram.png';
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import {Link} from "react-router-dom";
 
@@ -109,12 +106,12 @@ export default class ContactUs extends Component {
                     <div className="map">
                         <Map/>
                     </div>
-                    <p className="containerHeader"><span className="blue">Мы</span> в соц. сетях</p>
-                    <Row className="socialLinks">
-                        <img src={instagram} alt="instagram link"/>
-                        <img src={facebook} alt="facebook link"/>
-                        <img src={telegram} alt="telegram link"/>
-                    </Row>
+                    {/*<p className="containerHeader"><span className="blue">Мы</span> в соц. сетях</p>*/}
+                    {/*<Row className="socialLinks">*/}
+                    {/*    <img src={instagram} alt="instagram link"/>*/}
+                    {/*    <img src={facebook} alt="facebook link"/>*/}
+                    {/*    <img src={telegram} alt="telegram link"/>*/}
+                    {/*</Row>*/}
                 </Container>
                 <Footer/>
             </React.Fragment>

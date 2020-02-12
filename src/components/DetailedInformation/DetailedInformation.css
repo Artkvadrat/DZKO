@@ -65,9 +65,15 @@
     content: url("./../../img/Icons/buttonLeft.png")!important;
 }
 
-
 .carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
     border-top: 0!important;
     border-bottom: 0!important;
+}
 
+@media (max-width: 1000px) {
+    .detailedInformationContainer {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
 }

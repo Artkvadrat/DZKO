@@ -5,16 +5,16 @@ import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import conveyor from "../../img/products/34.png";
 import tank from "../../img/products/41.png";
-import chain from "../../img/products/76.png";
-import service from "../../img/products/36.png";
 import company from "../../img/company.jpg";
 import metalStructures from "../../img/products/40.jpg";
+import cooperation from "../../img/cooperation.jpg";
+import project from "../../img/project.jpg";
 
 const MainPage = () => {
     return (
         <React.Fragment>
             <Container fluid={true} className="mainPageContainer">
-                <p className="containerHeader">Наша <span className="blue">продукция</span></p>
+                <p className="containerHeader" style={{marginTop: "80px"}}>Наша <span className="blue">продукция</span></p>
                 <Row className="justify-content-center">
                     <Col lg={4} sm={12}>
                         <Link to='/production/conveyor'>
@@ -47,36 +47,12 @@ const MainPage = () => {
                             Вся продукция
                         </button>
                     </Link>
-                    {/*<Col lg={4} sm={12}>*/}
-                    {/*    <Link to='/production/chains'>*/}
-                    {/*        <button className="productionBlock">*/}
-                    {/*            <img src={chain} alt=""/>*/}
-                    {/*            <p>Цепи и такелаж</p>*/}
-                    {/*        </button>*/}
-                    {/*    </Link>*/}
-                    {/*</Col>*/}
-                    {/*<Col lg={4} sm={12}>*/}
-                    {/*    <Link to='/production/services'>*/}
-                    {/*        <button className="productionBlock">*/}
-                    {/*            <img src={service} alt=""/>*/}
-                    {/*            <p>Механическая обработка металла</p>*/}
-                    {/*        </button>*/}
-                    {/*    </Link>*/}
-                    {/*</Col>*/}
-                    {/*<Col lg={4} sm={12}>*/}
-                    {/*    <Link to='/production/repair'>*/}
-                    {/*        <button className="productionBlock">*/}
-                    {/*            <img src={service} alt=""/>*/}
-                    {/*            <p>Услуги</p>*/}
-                    {/*        </button>*/}
-                    {/*    </Link>*/}
-                    {/*</Col>*/}
                 </Row>
                 <p className="containerHeader">О <span className="blue">компании</span></p>
                 <Row className="justify-content-center">
                     <Col lg={4} sm={12} className="aboutImg">
                         <p>
-                            <img src={company} alt="Company"/>
+                            <img src={project} alt="Company"/>
                         </p>
                     </Col>
                     <Col lg={4} sm={12}>
@@ -85,22 +61,22 @@ const MainPage = () => {
                         <p className="aboutText">В сферу деятельности компании входит комплекс услуг по проектированию, разработке конструкторской документации и непосредственного воплощения  изделия в металле.</p>
                     </Col>
                 </Row>
-                <Row className="justify-content-center">
-                    <Col lg={4} sm={12}>
-                        <p className="backgroundNumber">2</p>
-                        <p className="aboutText">Кроме типовой продукции, ООО “ДЗКО” занимается разработкой и изготовлением различного нестандартного оборудования, в том числе и по чертежам и эскизам Заказчика.</p>
-                        <p className="aboutText">Квалифицированный коллектив предприятия в совокупности с современным  производственным оборудованием  обеспечивает  высокое качество выпускаемых изделий  и минимальные сроки производства.</p>
-                    </Col>
+                <Row className="justify-content-center" id="second">
                     <Col lg={4} sm={12} className="aboutImg">
                         <p>
                             <img src={company} alt="Company"/>
                         </p>
                     </Col>
+                    <Col lg={4} sm={12}>
+                        <p className="backgroundNumber">2</p>
+                        <p className="aboutText">Кроме типовой продукции, ООО “ДЗКО” занимается разработкой и изготовлением различного нестандартного оборудования, в том числе и по чертежам и эскизам Заказчика.</p>
+                        <p className="aboutText">Квалифицированный коллектив предприятия в совокупности с современным  производственным оборудованием  обеспечивает  высокое качество выпускаемых изделий  и минимальные сроки производства.</p>
+                    </Col>
                 </Row>
                 <Row className="justify-content-center">
                     <Col lg={4} sm={12} className="aboutImg">
                         <p>
-                            <img src={company} alt="Company"/>
+                            <img src={cooperation} alt="Company"/>
                         </p>
                     </Col>
                     <Col lg={4} sm={12}>

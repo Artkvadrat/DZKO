@@ -59,14 +59,18 @@ export default class Header extends Component {
                       customBurgerIcon={ <img src={ menu } alt="Open" /> }
                       customCrossIcon={ <img src={cross} alt="Close" /> }
                       className="burgerMenu" >
+                    <Link className="menu-item" to='/'>Главная</Link>
                     <Link className="menu-item" to='/production'>Продукция</Link>
                     <Link className="menu-item" to="/aboutUs">О компании</Link>
                     <Link className="menu-item" to='/contactUs'>Контакты</Link>
-                    <a className="menu-item" href="#">Обратный звонок</a>
+                    <p style={{marginTop: "10px"}}> </p>
+                    <ModalWindow className="menu-item"/>
                 </Menu>
                 <div className="logo">
-                    <img src={logo} alt="logo"/>
-                    <p>DZKO</p>
+                    <Link to="/">
+                        <img src={logo} alt="logo"/>
+                        <p>DZKO</p>
+                    </Link>
                 </div>
             </div>
         </React.Fragment>

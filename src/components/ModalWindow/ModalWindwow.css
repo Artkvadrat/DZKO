@@ -15,3 +15,27 @@
     outline: none;
     font-family: 'Rubik', sans-serif;
 }
+
+.submitFormRecall {
+    margin-left: 25%;
+    width: 50%;
+    height: 50px;
+    color: white;
+    background-color: #000B6F;
+    border-radius: 18px;
+    border: 0;
+    font-size: 24px;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+    .submitForm {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.secondModal {
+    color: red;
+}

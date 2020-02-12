@@ -19,7 +19,7 @@ export default class DetailedListBlocks extends Component {
         // function that find img by RegExp and return it
         let findImg = (id) => {
             for ( let i = 0; i < images.length; i++ ) {
-                if (/\/[0-9]?[0-9]/.exec(images[i])[0] === `/${id}`) {
+                if (/\/[0-9]?[0-9]?[0-9]/.exec(images[i])[0] === `/${id}`) {
                     return images[i];
                 }
 
@@ -130,7 +130,7 @@ export default class DetailedListBlocks extends Component {
 const Block = ( {img, text} ) => {
     return (
         <div className="listBlock">
-            <div style={{ height: "300px"}}>
+            <div>
                 <img src={img} alt={text}/>
             </div>
             <p>{text}</p>

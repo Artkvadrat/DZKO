@@ -3,7 +3,7 @@
     padding: 0 100px;
 }
 
-.header a{
+.header a, .logo a{
     text-decoration: none;
     outline: none;
 }
@@ -118,10 +118,11 @@
         font-family: 'Rubik', sans-serif;
         font-weight: 100;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 25px;
         line-height: 25px;
         outline: none;
         color: white;
+        margin-top: 10px;
     }
     .logo {
         text-align: center;

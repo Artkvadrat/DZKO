@@ -9,6 +9,7 @@
     "autoprefixer": "^9.7.3",
     "bootstrap": "^4.4.1",
     "emailjs": "^2.2.0",
+    "emailjs-com": "^2.4.1",
     "google-maps-react": "^2.0.2",
     "postcss-loader": "^3.0.0",
     "react": "^16.12.0",

@@ -21,3 +21,10 @@
     height: 80px;
     margin: 0 20px;
 }
+
+@media (max-width: 1000px) {
+    .ContactUsContainer {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+}

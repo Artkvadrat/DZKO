@@ -1,8 +1,7 @@
 import React, {Component} from "react";
 import "./ModalWindwow.css";
 import Modal from 'react-modal';
-import * as emailjs from "emailjs";
-import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
+import emailjs from "emailjs-com";
 
 const customStyles = {
     content : {
@@ -15,85 +14,78 @@ const customStyles = {
     }
 };
 
+const secondModal = {
+    content : {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        textAlign: 'center',
+        border: '1px solid #000B6F',
+        color: '#000B6F'
+    }
+};
+
 export default class ModalWindow extends Component {
+
     state = {
-        show: false,
-        name: '',
-        phone: ''
+        showFirst: false,
+        showSecond: false
     };
 
     openModal = () => {
-        this.setState({show: true})
+        this.setState({showFirst: true})
+    };
+
+    openSecondModal = () => {
+        this.setState({showSecond: true})
     };
 
     closeModal = () => {
-        this.setState({show: false});
+        this.setState({showFirst: false, showSecond: false});
+
     };
 
     handleSubmit = ( e ) => {
         e.preventDefault();
 
-        const { name, phone } = this.state;
-
-        let templateParams = {
-            from_name: name,
-            subject: "Перезвонить",
-            message_phone: phone,
-            message_name: name
-        };
-
-        emailjs.send( 'gmail', 'modal_form', templateParams )
+        emailjs.sendForm( 'siteDZKO', 'modal_form', e.target, "user_hU6rV9k4GGsqkLdd1nLrY" )
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
             }, function(error) {
                 console.log('FAILED...', error);
             });
-
-        this.resetForm();
+        this.closeModal();
+        this.openSecondModal();
     };
-
-    resetForm() {
-        this.setState({
-            name: '',
-            phone: ''
-        })
-    }
-
-    handleChange = (param, e) => {
-        this.setState({ [param]: e.target.value })
-    };
-
-    componentDidCatch(error, errorInfo) {
-        console.error( error );
-        console.error( errorInfo );
-        return <ErrorBoundary/>
-    }
 
     render() {
-        const { show, name, phone } = this.state;
+        const { showFirst, showSecond } = this.state;
         return (
             <div>
                 <button onClick={this.openModal}>Обратный звонок</button>
-                <Modal isOpen={show}
+                <Modal isOpen={showFirst}
                        onRequestClose={this.closeModal}
                        style={customStyles}>
-                    <form className="d-flex flex-column modalForm">
+                    <form className="d-flex flex-column modalForm" onSubmit={this.handleSubmit}>
                         <input placeholder="Ваше имя"
                                id="modalNameInput"
                                type="name"
-                               name="name"
-                               value={ name }
-                               onChange={this.handleChange.bind(this, 'name')} />
+                               name="name"/>
                         <input placeholder="Ваш телефон"
                                id="modalPhoneInput"
                                type="phone"
-                               name="phone"
-                               value={ phone }
-                               onChange={this.handleChange.bind(this, 'phone')} />
-                        <button className="submitForm" type="submit">
-                            Отправить
-                        </button>
+                               name="phone"/>
+                        <input type="submit" value="Оправить" className="submitFormRecall"/>
                     </form>
+                </Modal>
+                <Modal isOpen={showSecond}
+                       onRequestClose={this.closeModal}
+                       style={secondModal}>
+                    <h3>Ваше сообщение отпревлено!</h3>
+                    <p>Вам перезвонят в течении 15 минут.</p>
                 </Modal>
             </div>
         )
