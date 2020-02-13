@@ -9,5 +9,6 @@ import Kenter from "./kenter";
 import Talrep from "./talrep";
 import VariatorChain from "./variatorChain";
 import Swivel from "./swivel";
+import FoldingChain from "./foldingsChain";
 
-export { AnchorChainTable, DriveRollerChains, ForkChain, RoundGainChain, ClipSA, ClipP, Kenter, Talrep, VariatorChain, Swivel };
+export { AnchorChainTable, DriveRollerChains, ForkChain, RoundGainChain, ClipSA, ClipP, Kenter, Talrep, VariatorChain, Swivel, FoldingChain };

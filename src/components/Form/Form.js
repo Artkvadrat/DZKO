@@ -34,7 +34,7 @@ export default class Form extends Component {
     sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm("siteDZKO", "template_zXMoe4Jj", e.target, "user_hU6rV9k4GGsqkLdd1nLrY")
+        emailjs.sendForm("siteDZKO", "template_E1E3nJoL", e.target, "user_WC8bUA0ASCIbQsFKuLPg4")
             .then((result) => {
                 console.log(result.text);
             }, (error) => {

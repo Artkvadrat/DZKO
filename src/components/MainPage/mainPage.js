@@ -3,7 +3,7 @@ import "./mainPage.css";
 import Footer from "../Footer/Footer";
 import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import conveyor from "../../img/products/34.png";
+import conveyor from "../../img/products/8.png";
 import tank from "../../img/products/41.png";
 import company from "../../img/company.jpg";
 import metalStructures from "../../img/products/40.jpg";

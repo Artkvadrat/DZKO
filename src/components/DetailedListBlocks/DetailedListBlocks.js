@@ -99,9 +99,9 @@ export default class DetailedListBlocks extends Component {
             case "repair": {
                 return data.repair.map( (item, id) => {
                     return (
-                        // id + 27 because service category
+                        // id + 33 because repair category starts from 33 element
                         <Col lg={6} sm={12} key={id}>
-                            <Link to={`/production/repair/${id+32}`}>
+                            <Link to={`/production/repair/${id+33}`}>
                                 <Block img={findImg(item.img)}
                                        text={item.text}
                                        key={id}/>

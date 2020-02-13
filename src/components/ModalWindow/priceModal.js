@@ -28,7 +28,7 @@ const secondModal = {
     }
 };
 
-export default class ModalWindow extends Component {
+export default class PriceModalWindow extends Component {
 
     state = {
         showFirst: false,
@@ -65,7 +65,7 @@ export default class ModalWindow extends Component {
         const { showFirst, showSecond } = this.state;
         return (
             <div>
-                <button onClick={this.openModal}>Обратный звонок</button>
+                <button onClick={this.openModal} className="priceButton">Узнать цену вашей конфигурации</button>
                 <Modal isOpen={showFirst}
                        onRequestClose={this.closeModal}
                        style={customStyles}>

@@ -220,7 +220,7 @@ const RoundGainChain = () => {
                     <td>34.0</td>
                 </tr>
                 <tr>
-                    <td>342</td>
+                    <td>42</td>
                     <td>118</td>
                     <td>-</td>
                     <td>142</td>

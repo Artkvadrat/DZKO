@@ -4,11 +4,10 @@ import './Production.css';
 import Footer from "../Footer/Footer";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import {Col, Container, Row} from "react-bootstrap";
-import DetailedListPage from "../DetailedListPage/DetailedListPage";
 import { Link } from 'react-router-dom';
 //import images
 import backImg from "../../img/Icons/back.png";
-import conveyor from '../../img/products/34.png';
+import conveyor from '../../img/products/8.png';
 import tank from '../../img/products/41.png';
 import chain from '../../img/products/76.png';
 import service from '../../img/products/36.png';

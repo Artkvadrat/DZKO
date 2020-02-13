@@ -7,8 +7,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import {Link} from "react-router-dom";
+import PriceModalWindow from "../ModalWindow/priceModal";
 import { AnchorChainTable, DriveRollerChains, ForkChain, RoundGainChain,
-         ClipSA, ClipP, Kenter, Talrep, VariatorChain, Swivel } from '../tables/index';
+         ClipSA, ClipP, Kenter, Talrep, VariatorChain, Swivel, FoldingChain } from '../tables/index';
 //importing .json file as txt array
 import txt from './detailedInformation';
 //import images
@@ -108,7 +109,9 @@ export default class DetailedInformation extends Component {
                 case '17':
                     return <VariatorChain/>;
                 case '23':
-                    return <Swivel/>
+                    return <Swivel/>;
+                case '15':
+                    return <FoldingChain/>
             }
         };
 
@@ -162,6 +165,9 @@ export default class DetailedInformation extends Component {
                         <Col lg={10} sm={12}>
                             { isTables() }
                         </Col>
+                    </Row>
+                    <Row className="justify-content-center">
+                        <PriceModalWindow/>
                     </Row>
                 </Container>
             </React.Fragment>
