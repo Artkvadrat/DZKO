@@ -9,15 +9,17 @@ import Production from "../Production/Production";
 import DetailedListPage from "../DetailedListPage/DetailedListPage";
 import MainPage from "../MainPage/mainPage";
 //import Router
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../Header/Header";
 
 
 
 function App() {
+
+    let context = {};
     return (
         <React.Fragment>
-            <Router>
+            <Router context={context} location={{ pathname: '/'}}>
                 <Header/>
                 <Switch>
                     <Route path="/"
