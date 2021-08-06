@@ -73,18 +73,24 @@ export default class ModalWindow extends Component {
                         <input placeholder="Ваше имя"
                                id="modalNameInput"
                                type="name"
-                               name="name"/>
+                               name="name"
+                               required
+                               minLength={3}
+                               maxLength={20}/>
                         <input placeholder="Ваш телефон"
                                id="modalPhoneInput"
                                type="phone"
-                               name="phone"/>
+                               name="phone"
+                               required
+                               minLength={8}
+                               maxLength={13}/>
                         <input type="submit" value="Оправить" className="submitFormRecall"/>
                     </form>
                 </Modal>
                 <Modal isOpen={showSecond}
                        onRequestClose={this.closeModal}
                        style={secondModal}>
-                    <h3>Ваше сообщение отпревлено!</h3>
+                    <h3>Ваше сообщение отправлено!</h3>
                     <p>Вам перезвонят в течении 15 минут.</p>
                 </Modal>
             </div>

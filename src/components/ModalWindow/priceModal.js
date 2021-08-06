@@ -73,11 +73,17 @@ export default class PriceModalWindow extends Component {
                         <input placeholder="Ваше имя"
                                id="modalNameInput"
                                type="name"
-                               name="name"/>
+                               name="name"
+                               required
+                               minLength={3}
+                               maxLength={20}/>
                         <input placeholder="Ваш телефон"
                                id="modalPhoneInput"
                                type="phone"
-                               name="phone"/>
+                               name="phone"
+                               required
+                               minLength={8}
+                               maxLength={13}/>
                         <input type="submit" value="Оправить" className="submitFormRecall"/>
                     </form>
                 </Modal>

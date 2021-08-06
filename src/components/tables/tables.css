@@ -1,8 +1,11 @@
-.myTable {
+.myTable{
+    overflow: auto;
+    font-family: "Rubik", sans-serif;
+}
+
+.myTable table {
     max-width: 1100px;
     text-align: center;
-    font-family: "Rubik", sans-serif;
-    overflow-y: scroll;
 }
 
 .myTable td {

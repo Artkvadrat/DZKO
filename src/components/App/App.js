@@ -8,19 +8,21 @@ import DetailedInformation from "../DetailedInformation/DateiledInformation";
 import Production from "../Production/Production";
 import DetailedListPage from "../DetailedListPage/DetailedListPage";
 import MainPage from "../MainPage/mainPage";
+import Header from "../Header/Header";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 //import Router
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 
 
 function App() {
 
-    let context = {};
     return (
         <React.Fragment>
-            <Router context={context} location={{ pathname: '/'}}>
-                <Header/>
+            <Router location={{ pathname: '/'}}>
+                <ScrollToTop />
+                <Header />
                 <Switch>
                     <Route path="/"
                            component={ MainPage } exact />
@@ -56,6 +58,21 @@ function App() {
                                return <DetailedListPage active={6}/>
                            }}
                            exact />
+                    <Route path="/production/rootVegetableProcessing"
+                           render={ () => {
+                               return <DetailedListPage active={7}/>
+                           }}
+                           exact />
+                    <Route path="/production/sleeveFingerCoupling"
+                          render={ () => {
+                            return <DetailedListPage active={8}/>
+                          }}
+                          exact />
+                    <Route path="/production/pipeSwivelJoint"
+                           render={ () => {
+                             return <DetailedListPage active={9}/>
+                           }}
+                           exact />
                     <Route path="/production/conveyor/:id"
                            render={ ({match}) => {
                                const { id } = match.params;
@@ -86,11 +103,27 @@ function App() {
                                const {id} = match.params;
                                return <DetailedInformation id={id}/>
                            }}/>
+                    <Route path="/production/rootVegetableProcessing/:id"
+                           render={ ({match}) => {
+                               const {id} = match.params;
+                               return <DetailedInformation id={id}/>
+                           }}/>
+                    <Route path="/production/sleeveFingerCoupling/:id"
+                           render={ ({match}) => {
+                             const {id} = match.params;
+                             return <DetailedInformation id={id}/>
+                           }}/>
+                    <Route path="/production/pipeSwivelJoint/:id"
+                           render={ ({match}) => {
+                             const {id} = match.params;
+                             return <DetailedInformation id={id}/>
+                           }}/>
                     <Route path="/contactUs"
                            component={ ContactUs } exact/>
-                     <Route path="/aboutUs"
-                            component={ AboutUs } exact/>
+                    <Route path="/aboutUs"
+                           component={ AboutUs } exact/>
                 </Switch>
+              <Footer/>
             </Router>
         </React.Fragment>
     );

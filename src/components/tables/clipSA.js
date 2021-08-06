@@ -3,7 +3,8 @@ import './tables.css';
 
 const ClipSA = () => {
     return (
-        <table className="myTable">
+        <div className="myTable">
+        <table>
             <thead>
                 <tr>
                     <td rowSpan={2}>Наименование</td>
@@ -276,6 +277,7 @@ const ClipSA = () => {
                 </tr>
             </tbody>
         </table>
+        </div>
     )
 };
 

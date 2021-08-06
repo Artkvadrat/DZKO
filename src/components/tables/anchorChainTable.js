@@ -3,7 +3,8 @@ import './tables.css';
 
 const AnchorChainTable = () => {
   return (
-      <table className="myTable">
+      <div className="myTable">
+      <table>
           <thead>
               <tr>
                   <td rowSpan={3} style={{width: "150px"}}>Калибр, мм</td>
@@ -397,6 +398,7 @@ const AnchorChainTable = () => {
               </tr>
           </tbody>
       </table>
+      </div>
   )
 };
 

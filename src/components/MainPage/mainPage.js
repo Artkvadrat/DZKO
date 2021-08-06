@@ -1,22 +1,28 @@
 import React from "react";
 import "./mainPage.css";
-import Footer from "../Footer/Footer";
 import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {Helmet} from "react-helmet";
+//import images
 import conveyor from "../../img/products/8.png";
-import tank from "../../img/products/41.png";
 import company from "../../img/company.jpg";
-import metalStructures from "../../img/products/40.jpg";
+import metalStructures from "../../img/products/37.jpg";
 import cooperation from "../../img/cooperation.jpg";
 import project from "../../img/project.jpg";
+import rootVegetableProcessing from "../../img/products/27.jpg";
 
 const MainPage = () => {
     return (
         <React.Fragment>
+            <Helmet>
+                <title>DZKO | Главная</title>
+                <meta name="description" content="Днепропетровский завод конвейерного оборудавния - Ваша гарантия качевства!"/>
+                <meta name="keywords" content="ДЗКО главная конвейеры Днепр Днепропетровск о компании"/>
+            </Helmet>
             <Container fluid={true} className="mainPageContainer">
                 <p className="containerHeader" style={{marginTop: "80px"}}>Наша <span className="blue">продукция</span></p>
-                <Row className="justify-content-center">
-                    <Col lg={4} sm={12}>
+                <Row className="justify-content-around">
+                    <Col lg={3} sm={12}>
                         <Link to='/production/conveyor'>
                             <button className="productionBlock">
                                 <img src={conveyor} alt="Конвейер"/>
@@ -24,19 +30,19 @@ const MainPage = () => {
                             </button>
                         </Link>
                     </Col>
-                    <Col lg={4} sm={12}>
+                    <Col lg={3} sm={12}>
+                        <Link to='/production/rootVegetableProcessing'>
+                            <button className="productionBlock">
+                                <img src={rootVegetableProcessing} alt=""/>
+                                <p>Линия для переработки корнеплодов</p>
+                            </button>
+                        </Link>
+                    </Col>
+                    <Col lg={3} sm={12}>
                         <Link to='/production/metalStructures'>
                             <button className="productionBlock">
                                 <img src={metalStructures} alt=""/>
                                 <p>Металлоконструкции</p>
-                            </button>
-                        </Link>
-                    </Col>
-                    <Col lg={4} sm={12}>
-                        <Link to='/production/tank'>
-                            <button className="productionBlock">
-                                <img src={tank} alt=""/>
-                                <p>Бак конденсаторный</p>
                             </button>
                         </Link>
                     </Col>
@@ -86,7 +92,6 @@ const MainPage = () => {
                     </Col>
                 </Row>
             </Container>
-            <Footer/>
         </React.Fragment>
     )
 };

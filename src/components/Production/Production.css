@@ -1,20 +1,27 @@
 .ProductionContainer {
+    margin-top: 150px;
     padding-left: 100px;
     padding-right: 100px;
 }
 
 .productionBlock {
     width: 100%;
-    height: 500px;
+    height: 350px;
     margin-bottom: 40px;
     margin-top: 40px;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid #000B6F;
+    transition: 0.5s;
+    word-wrap: break-word;
+}
+
+.productionBlock:hover {
+    box-shadow: inset 0 0 0 3px #000B6F;
 }
 
 .productionBlock img {
-    max-height: 56%;
-    max-width: 90%;
+    max-height: 47%;
+    max-width: 75%;
     margin-bottom: 50px;
 }
 

@@ -110,6 +110,48 @@ export default class DetailedListBlocks extends Component {
                     )
                 });
             }
+            case "rootVegetable": {
+                return data.rootVegetable.map( (item, id) => {
+                    return (
+                        // id + 34 because rootVegetable category starts from 34 element
+                        <Col lg={6} sm={12} key={id}>
+                            <Link to={`/production/rootVegetableProcessing/${id+34}`}>
+                                <Block img={findImg(item.img)}
+                                       text={item.text}
+                                       key={id}/>
+                            </Link>
+                        </Col>
+                    )
+                });
+            }
+            case "sleeveFingerCoupling": {
+              return data.sleeveFingerCoupling.map( (item, id) => {
+                return (
+                  // id + 37 because rootVegetable category starts from 37 element
+                  <Col lg={6} sm={12} key={id}>
+                              <Link to={`/production/sleeveFingerCoupling/${id+38}`}>
+                                  <Block img={findImg(item.img)}
+                                         text={item.text}
+                                         key={id}/>
+                              </Link>
+                          </Col>
+                )
+              });
+            }
+            case "pipeSwivelJoint": {
+              return data.pipeSwivelJoint.map( (item, id) => {
+                return (
+                  // id + 38 because pipeSwivelJoint category starts from 38 element
+                  <Col lg={6} sm={12} key={id}>
+                              <Link to={`/production/pipeSwivelJoint/${id+39}`}>
+                                  <Block img={findImg(item.img)}
+                                         text={item.text}
+                                         key={id}/>
+                              </Link>
+                          </Col>
+                )
+              });
+            }
             default: {
                 return data.conveyor.map( (item, id) => {
                     return (
@@ -131,7 +173,8 @@ const Block = ( {img, text} ) => {
     return (
         <div className="listBlock">
             <div>
-                <img src={img} alt={text}/>
+                    <span className="helper"> </span>
+                    <img src={img} alt={text}/>
             </div>
             <p>{text}</p>
         </div>

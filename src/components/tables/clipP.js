@@ -3,7 +3,8 @@ import './tables.css';
 
 const ClipP = ( ) => {
     return (
-        <table className="myTable">
+        <div className="myTable">
+        <table>
             <thead>
                 <tr>
                     <td rowSpan={2}>Наименование</td>
@@ -120,6 +121,7 @@ const ClipP = ( ) => {
                 </tr>
             </tbody>
         </table>
+        </div>
     )
 };
 

@@ -3,7 +3,8 @@ import './tables.css';
 
 const DriveRollerChains = () => {
     return (
-        <table className="myTable">
+        <div className="myTable">
+        <table>
             <thead>
                 <tr>
                     <td rowSpan={2}>Цепь</td>
@@ -411,6 +412,7 @@ const DriveRollerChains = () => {
                 </tr>
             </tbody>
         </table>
+        </div>
     )
 };
 

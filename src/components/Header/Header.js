@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import "./Header.css";
 //import images
-import logo from "../../img/Icons/gearLogo.png";
+import logo from "../../img/Icons/logo.png";
+import mobileLogo from "../../img/Icons/mobile-logo.png";
 import menu from "../../img/Icons/menu.png";
 import cross from "../../img/Icons/cancel.png";
 // importing a burger menu component
@@ -14,6 +15,10 @@ import ModalWindow from "../ModalWindow/modalWindow";
 
 export default class Header extends Component {
 
+    state = {
+        openMenu: false
+    };
+
     componentDidCatch(error, errorInfo) {
         console.error( error );
         console.error( errorInfo );
@@ -22,6 +27,23 @@ export default class Header extends Component {
 
     render () {
 
+        const { openMenu } = this.state;
+
+        const isMenuOpen = (state) => {
+            //console.log(`Function stateChange ${state.openMenu}`);
+            return state.openMenu;
+
+        };
+
+        const closeMenu = () => {
+            this.setState({openMenu: false});
+            //console.log(`Function CloseMenu ${openMenu}`);
+        };
+
+        function toOpenMenu () {
+            this.setState({openMenu: true});
+            //console.log(`Function toOpenMenu ${openMenu}`);
+        }
 
         return (
             <React.Fragment>
@@ -30,10 +52,18 @@ export default class Header extends Component {
                     <div className="logo col-md-3">
                         <Link to="/">
                             <img src={logo} alt="logo"/>
-                            <p>DZKO</p>
+                            {/*<p>DZKO</p>*/}
                         </Link>
                     </div>
                     <div className="headerList col-md-9">
+                        <div className="headerPhoneLinks">
+                            <a href="tel:+380974728575">
+                                +38-(097)-472-85-75
+                            </a>
+                            <a href="tel:+380955764804">
+                                +38-(095)-576-48-04
+                            </a>
+                        </div>
                         <ul>
                             <li>
                                 <Link to='/'>Главная</Link>
@@ -55,22 +85,35 @@ export default class Header extends Component {
                 </div>
             </div>
             <div className="smallHeader">
-                <Menu width={ 250 }
-                      customBurgerIcon={ <img src={ menu } alt="Open" /> }
-                      customCrossIcon={ <img src={cross} alt="Close" /> }
-                      className="burgerMenu" >
-                    <Link className="menu-item" to='/'>Главная</Link>
-                    <Link className="menu-item" to='/production'>Продукция</Link>
-                    <Link className="menu-item" to="/aboutUs">О компании</Link>
-                    <Link className="menu-item" to='/contactUs'>Контакты</Link>
+                <Menu isOpen={ openMenu }
+
+                      width={ 250 }
+                      onChangeState={ isMenuOpen }
+                      customBurgerIcon={ <img src={ menu }
+                                              alt="Open"
+                                              onClick={() => toOpenMenu()}/> }
+                      customCrossIcon={ <img src={cross}
+                                             alt="Close"
+                                             onClick={() => closeMenu()}/> }
+                      className="burgerMenu">
+                    <Link className="menu-item" to='/' onClick={() => closeMenu()}>Главная</Link>
+                    <Link className="menu-item" to='/production' onClick={() => closeMenu()}>Продукция</Link>
+                    <Link className="menu-item" to="/aboutUs" onClick={() => closeMenu()}>О компании</Link>
+                    <Link className="menu-item" to='/contactUs' onClick={() => closeMenu()}>Контакты</Link>
                     <p style={{marginTop: "10px"}}> </p>
                     <ModalWindow className="menu-item"/>
                 </Menu>
                 <div className="logo">
                     <Link to="/">
-                        <img src={logo} alt="logo"/>
+                        <img src={mobileLogo} alt="logo"/>
                         <p>DZKO</p>
                     </Link>
+                    <div>
+                        <a href="tel:+380679550954">
+                            +38-(097)-472-85-75
+                        </a>
+                        <ModalWindow className="menu-item"/>
+                    </div>
                 </div>
             </div>
         </React.Fragment>

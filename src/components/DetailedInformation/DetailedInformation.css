@@ -1,7 +1,5 @@
 .detailedInformationContainer {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 100px;
+    padding: 150px 100px 0;
 }
 
 .carouselDetailed {
@@ -57,12 +55,22 @@
 
 .carousel .control-next.control-arrow:before {
     border-left: 0!important;
-    content: url("./../../img/Icons/ButtonRight.png")!important;
+    background-image: url("./../../img/Icons/ButtonRight.png")!important;
+    content: ""!important;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 80px;
 }
 
 .carousel .control-prev.control-arrow:before {
     border-right: 0!important;
-    content: url("./../../img/Icons/buttonLeft.png")!important;
+    background-image: url("./../../img/Icons/buttonLeft.png")!important;
+    content: ""!important;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 80px;
 }
 
 .carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
@@ -76,4 +84,14 @@
         padding-right: 20px;
         padding-bottom: 20px;
     }
+    .carousel .control-next.control-arrow:before {
+        width: 20px;
+        height: 40px;
+    }
+
+    .carousel .control-prev.control-arrow:before {
+        width: 20px;
+        height: 40px;
+    }
+
 }

@@ -3,7 +3,8 @@ import './tables.css';
 
 const Kenter = () => {
     return (
-        <table className="myTable">
+        <div className="myTable">
+        <table>
             <thead>
                 <tr>
                     <td>Калибр якорной цепи, d=d3</td>
@@ -297,6 +298,7 @@ const Kenter = () => {
                 </tr>
             </tbody>
         </table>
+        </div>
     )
 };
 

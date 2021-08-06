@@ -1,9 +1,9 @@
 import React from "react";
 import './aboutUs.css';
 //import components
-import Footer from "../Footer/Footer";
 import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {Helmet} from "react-helmet";
 //importing png's
 import backImg from "../../img/Icons/back.png";
 import company from "../../img/company.jpg";
@@ -13,6 +13,11 @@ import project from "../../img/project.jpg"
 const AboutUs = () => {
     return (
         <React.Fragment>
+            <Helmet>
+                <title>ДЗКО | О компании</title>
+                <meta name="description" content="Днепропетровский завод конвейерного оборудавния - о компании"/>
+                <meta name="keywords" content="ДЗКО гарантия офис поставщики"/>
+            </Helmet>
             <Container fluid={true} className="AboutUsContainer">
                 <Row>
                     <Col sm={6}>
@@ -64,7 +69,6 @@ const AboutUs = () => {
                     </Col>
                 </Row>
             </Container>
-            <Footer/>
         </React.Fragment>
     )
 };

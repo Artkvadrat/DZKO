@@ -3,7 +3,8 @@ import "./tables.css";
 
 const FoldingChain = () => {
     return (
-        <table className="myTable">
+        <div className="myTable">
+        <table>
             <thead>
             <tr>
                 <td rowSpan={4}>Наименование</td>
@@ -334,6 +335,7 @@ const FoldingChain = () => {
             </tr>
             </tbody>
         </table>
+        </div>
     )
 };
 

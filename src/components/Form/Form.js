@@ -32,6 +32,7 @@ export default class Form extends Component {
     };
 
     sendEmail = (e) => {
+        e.persist();
         e.preventDefault();
 
         emailjs.sendForm("siteDZKO", "template_E1E3nJoL", e.target, "user_WC8bUA0ASCIbQsFKuLPg4")
@@ -42,6 +43,11 @@ export default class Form extends Component {
             });
 
         this.openModal();
+
+        e.target[0].value = '';
+        e.target[1].value = '';
+        e.target[2].value = '';
+        e.target[3].value = '';
 
     };
 
@@ -54,24 +60,35 @@ export default class Form extends Component {
                 <input placeholder="Ваше имя"
                        id="nameInput"
                        type="name"
-                       name="contact_name"/>
+                       name="contact_name"
+                       required
+                       minLength={2}
+                       maxLength={20}/>
                 <div className="secondLineOfForm">
                     <input placeholder="Ваш телефон"
                            id="phoneInput"
                            type="phone"
-                           name="user_phone"/>
+                           name="user_phone"
+                           required
+                           minLength={8}
+                           maxLength={13}/>
                     <input placeholder="Ваш E-mail"
                            id="emailInput"
                            type="email"
-                           name="user_email"/>
+                           name="user_email"
+                           required
+                           minLength={5}
+                           maxLength={30}/>
                 </div>
                 <textarea placeholder="Ваш вопрос"
                           id="messageInput"
-                          maxLength="300"
                           rows="5"
                           cols="35"
-                          name="message"/>
-                <input type="submit" value="Оправить" className="submitForm"/>
+                          name="message"
+                          required
+                          minLength={5}
+                          maxLength={100}/>
+                <input type="submit" value="Отправить" className="submitForm"/>
             </form>
             <Modal isOpen={show}
                    onRequestClose={this.closeModal}

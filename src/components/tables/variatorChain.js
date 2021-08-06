@@ -3,7 +3,8 @@ import "./tables.css";
 
 const VariatorChain = () => {
     return (
-        <table className="myTable">
+        <div className="myTable">
+        <table>
             <thead>
             <tr>
                 <td rowSpan={3}>Тип вариатора</td>
@@ -159,6 +160,7 @@ const VariatorChain = () => {
             </tr>
             </tbody>
         </table>
+        </div>
     )
 };
 

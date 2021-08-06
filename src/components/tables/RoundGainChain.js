@@ -3,7 +3,8 @@ import "./tables.css";
 
 const RoundGainChain = () => {
     return (
-        <table className="myTable">
+        <div className="myTable">
+        <table>
             <thead>
                 <tr>
                     <td colSpan={2}>Калибр цепи, d</td>
@@ -232,6 +233,7 @@ const RoundGainChain = () => {
                 </tr>
             </tbody>
         </table>
+        </div>
     )
 };
 

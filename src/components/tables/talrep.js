@@ -3,7 +3,8 @@ import "./tables.css";
 
 const Talrep = () => {
     return (
-        <table className="myTable">
+        <div className="myTable">
+        <table>
             <thead>
                 <tr>
                     <td>Название по ГОСТ 9690-71</td>
@@ -110,7 +111,7 @@ const Talrep = () => {
                 <tr>
                     <td>5,0 ВВ-ОС</td>
                     <td>50-ОС-ВВ</td>
-                    <td>M27</td>
+                    <td>M33</td>
                     <td>5.0</td>
                     <td>248</td>
                     <td>881</td>
@@ -169,6 +170,7 @@ const Talrep = () => {
                 </tr>
             </tbody>
         </table>
+        </div>
     )
 };
 

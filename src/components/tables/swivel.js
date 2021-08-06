@@ -3,7 +3,8 @@ import "./tables.css";
 
 const  Swivel = () => {
     return (
-        <table className="myTable">
+        <div className="myTable">
+        <table>
             <thead>
             <tr>
                 <td>Калибр якорной цепи, d</td>
@@ -481,6 +482,7 @@ const  Swivel = () => {
             </tr>
             </tbody>
         </table>
+        </div>
     )
 };
 

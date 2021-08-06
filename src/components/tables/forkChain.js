@@ -3,7 +3,8 @@ import "./tables.css";
 
 const ForkChain = () => {
     return (
-        <table className="myTable">
+        <div className="myTable">
+        <table>
             <thead>
                 <tr>
                     <td>Шаг цепи номинальный</td>
@@ -121,6 +122,7 @@ const ForkChain = () => {
                 </tr>
             </tbody>
         </table>
+        </div>
     )
 };
 

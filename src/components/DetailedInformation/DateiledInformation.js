@@ -8,8 +8,10 @@ import { Carousel } from 'react-responsive-carousel';
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import {Link} from "react-router-dom";
 import PriceModalWindow from "../ModalWindow/priceModal";
+import {Helmet} from "react-helmet";
 import { AnchorChainTable, DriveRollerChains, ForkChain, RoundGainChain,
-         ClipSA, ClipP, Kenter, Talrep, VariatorChain, Swivel, FoldingChain } from '../tables/index';
+         ClipSA, ClipP, Kenter, Talrep, VariatorChain, Swivel, FoldingChain,
+    SleeveFingerCoupling } from '../tables/index';
 //importing .json file as txt array
 import txt from './detailedInformation';
 //import images
@@ -26,12 +28,12 @@ export default class DetailedInformation extends Component {
         return <ErrorBoundary/>
     }
 
-    //component should receive an id of element and header?
+    //component should receive an id of element
     render() {
 
         const { id } = this.props;
         let currentUrl = window.location.href;
-        let fromUrl = /\/production\/(conveyor|tank|chains|metalStructures|services|repair)/.exec(currentUrl);
+        let fromUrl = /\/production\/(conveyor|tank|chains|metalStructures|services|repair|rootVegetableProcessing|sleeveFingerCoupling|pipeSwivelJoint)/.exec(currentUrl);
 
         // function to import whole directory of files
         let importAll = ( r ) => {
@@ -54,7 +56,7 @@ export default class DetailedInformation extends Component {
         //// get video url from .json and comparing with existed videos throw url
         let getVideo = ( id ) => {
             for ( let i = 0; i < videos.length; i++ ){
-                if (/\/[0-9]?[0-9]?[0-9]/.exec(images[i])[0] === `/${id}`) {
+                if (/\/[0-9]?[0-9]?[0-9]/.exec(videos[i])[0] === `/${id}`) {
                     return <div key={i}>
                                <video src={ videos[i] } controls key={i}/>
                            </div>
@@ -112,11 +114,22 @@ export default class DetailedInformation extends Component {
                     return <Swivel/>;
                 case '15':
                     return <FoldingChain/>
+                case '38':
+                    return <SleeveFingerCoupling />
+                default:
+                    return " "
             }
         };
 
+        let Title = `ДЗКО | ${txt[id-1].name}`;
+
         return (
             <React.Fragment>
+                <Helmet>
+                    <title>{Title}</title>
+                    <meta name="description" content={`Днепропетровский завод конвейерного оборудавния. ${txt[id-1].name}`}/>
+                    <meta name="keywords" content={`ДЗКО ${txt[id-1].name} товар купить под заказ`}/>
+                </Helmet>
                 <Container fluid={true} className="detailedInformationContainer">
                     <Row className="linkToMain">
                         <Link to={`${fromUrl[0]}`}>
@@ -128,7 +141,7 @@ export default class DetailedInformation extends Component {
                     </Row>
                     <Row className="justify-content-center">
                         <Col lg={8} sm={11}>
-                            <p className="containerHeader"><span className="blue">{txt[id-1].name}</span></p>
+                            <h1 className="containerHeader"><span className="blue">{txt[id-1].name}</span></h1>
                         </Col>
                     </Row>
                     <Row className="justify-content-center">
@@ -151,6 +164,14 @@ export default class DetailedInformation extends Component {
                             { isHeader() }
                         </Col>
                     </Row>
+                    <Row className="justify-content-center" style={{overflow: "hidden"}}>
+                        <Col lg={10} sm={12}>
+                            { isTables() }
+                        </Col>
+                    </Row>
+                    <Row className="justify-content-center">
+                        <PriceModalWindow/>
+                    </Row>
                     <Row className="justify-content-center">
                         <Col lg={8} sm={11} className="designImg">
                             { isDesign() }
@@ -160,14 +181,6 @@ export default class DetailedInformation extends Component {
                         <Col lg={8} sm={11}>
                             { txt[id-1].text.map( (item, id) => { return <p className="descriptionText" key={id}>{item}</p>} ) }
                         </Col>
-                    </Row>
-                    <Row className="justify-content-center" style={{overflow: "hidden"}}>
-                        <Col lg={10} sm={12}>
-                            { isTables() }
-                        </Col>
-                    </Row>
-                    <Row className="justify-content-center">
-                        <PriceModalWindow/>
                     </Row>
                 </Container>
             </React.Fragment>
